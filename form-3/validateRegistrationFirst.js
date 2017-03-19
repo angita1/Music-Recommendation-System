@@ -1,4 +1,4 @@
-function validate()
+h  function validate()
 {
 	var error="";
 	var name = document.getElementById("form-username");

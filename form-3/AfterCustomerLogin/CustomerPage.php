@@ -1,4 +1,18 @@
+
 <?php
+session_start();
+/*if(isset($_SESSION['username'])){
+    $username=$_SESSION['username'];
+}else{
+    $username="no one";
+}
+
+if(isset($_SESSION['regid'])){
+    $regid=$_SESSION['regid'];
+}else{
+    $regid=12345;
+}*/
+
 if(isset($_GET['username'])){
     $username=$_GET['username'];
 }else{
@@ -55,7 +69,7 @@ if(isset($_GET['regid'])){
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                </button>
-		                <a class="navbar-brand" href="index.html">
+		                <a class="navbar-brand" href="index.php"> <!--I made ahongba here-->
 		                	<!--<img class="img-responsive" src="images/musiglobe.jpg" alt="logo" height="200" width="200" />-->
 		                	<h1 style="text-indent:95px; color:white; font-weight: bold;">MusiGlobe</h1>
 		                	<!--<h3 style="text-indent:95px; color:white; font-weight: bold;">Welcome </h3>-->
@@ -67,8 +81,11 @@ if(isset($_GET['regid'])){
 		                    <li class="scroll"><a href="#explore">Explore</a></li>                         
 		                    <li class="scroll"><a href="#about">About</a></li>                  
 		                    <li class="no-scroll"><a href="#contact">Contact</a></li> 
-		                    <!--<li class="no-scroll"><a href="http://localhost/OurProject/evento-free-music-event-template/index.html#">Logout</a></li>-->
-		                    <li class="no-scroll"><a href="logout.php#">Logout</a></li>
+		                    <!--<li class="no-scroll"><a href="http://localhost/OurProject/evento-free-music-event-template/index.html#">Logout
+		                </a></li>-->
+		                    <li class="no-scroll"><a href="../logout.php#">Logout</a></li>
+		                    
+		                     <!--<a href="logout.php#">Logout</a>ahongba-->
 		                </ul>
 		            </div>
 		        </div>

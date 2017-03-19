@@ -1,9 +1,10 @@
 <?php
+session_start();
 	if(isset( $_POST['submit_form']))
 	{
  		function validate_data($data)
  		{
- 	 		$data = trim($data);
+ 	 		  $data = trim($data);
   			$data = stripslashes($data);
   			$data = strip_tags($data);
   			$data = htmlspecialchars($data);
@@ -35,7 +36,7 @@
  		$emailid = validate_data( $_POST['form-email'] );
  		$password = validate_data( $_POST['form-cpassword'] );
  		$regid=rand(1,100000);
-
+		
  		$host = 'localhost';
  		$user = 'root';
  		$pass = '';
@@ -50,7 +51,8 @@
  
  		if(mysqli_query($con,$que))
  		{
-			echo "You have successfully registered. Thankyou.<br/><br />Your registration id : ".$regid."  (Please keep a note of it)<br /><br /><a href='http://localhost/OurProject/evento-free-music-event-template/index.html'>Vist the website</a>";
+			echo "You have successfully registered. Thankyou.<br/><br />Your registration id : ".$regid."  (Please keep a note of it)<br /><br />
+      <a href='../index.php'>Vist the website</a>";
 		}	
 
 		else

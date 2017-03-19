@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -46,7 +49,7 @@
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                </button>
-		                <a class="navbar-brand" href="index.html">
+		                <a class="navbar-brand" href="index.php">
 		                	<!--<img class="img-responsive" src="images/musiglobe.jpg" alt="logo" height="200" width="200" />-->
 		                	<h1 style="text-indent:95px; color:white; font-weight: bold;">MusiGlobe</h1>
 		                </a>                    
@@ -384,3 +387,4 @@
     <script type="text/javascript" src="js/main.js"></script>  
 </body>
 </html>
+?>

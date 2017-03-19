@@ -33,7 +33,7 @@
     
     <body>";
 
- 		$songid = validate_data( $_POST['songIDtextbox'] );
+ 		$songname = validate_data( $_POST['songNametextbox'] );
  		$regid = validate_data( $_POST['regid'] );
  		$rating = validate_data( $_POST['ratingValue'] );
 
@@ -48,23 +48,23 @@
 		}
 
 		//Check if the song id is valid
-		$query="SELECT Song_Name FROM Song WHERE Song_id = '".$songid."'";
+		$query="SELECT Song_Name FROM Song WHERE Song_Name = '".$songname."'";
 		if($result=mysqli_query($con,$query))
  		{
  			$row=mysqli_fetch_row($result);
  			//echo "row[0] = ".$row[0];
  			if($row[0]=="")
  			{
- 				echo "You have entered a wrong song id.<br /><br />Please go back and enter a correct one.";
+ 				echo "You have entered a wrong song name.<br /><br />Please go back and enter a correct one.";
  			}
  			else
  			{
 
- 		$que="INSERT INTO Rating VALUES ('$regid','$songid','$rating')";
+ 		$que="INSERT INTO Rating VALUES ('$regid','$songname','$rating')";
  
  		if(mysqli_query($con,$que))
  		{
-			header("Location: http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/successRatingPage.php?regid=".urlencode($regid));
+			header("Location: ./successRatingPage.php?regid=".urlencode($regid));
 		}	
 
 		else
@@ -75,7 +75,7 @@
 		}
 		else
 		{
-			echo "<strong>You have entered a wrong song id.<br /><br />Please go back and enter a correct one.</strong>";
+			echo "<strong>You have entered a wrong song name.<br /><br />Please go back and enter a correct one.</strong>";
 		}
  		mysqli_close($con);
  		echo "

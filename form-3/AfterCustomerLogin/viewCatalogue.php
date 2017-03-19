@@ -38,7 +38,7 @@ echo "<!DOCTYPE html>
       
       <div id='tfheader'>
 		<form id='tfnewsearch' method='POST' action='searchCatalogue.php'>
-		        <input type='text' id='tfq' class='tftextinput2' name='searchQuery' size='21' maxlength='120' placeholder='Search songs here by name'>
+            <input type='text' id='tfq' class='tftextinput2' name='searchQuery' size='21' maxlength='120' placeholder='Search songs'>
 		        <input type='submit' value='>' class='tfbutton2' name='submit_searchCatalogue'/>
 		</form>
 		<div class='tfclear'></div>
@@ -53,7 +53,7 @@ echo "<!DOCTYPE html>
       
    <form role = 'form' action='getRating.php' method='post' class='login-form' onsubmit='return validate();' id='form1'>
    <div class = 'form-group'>
-      <input type = 'text' class = 'form-control' id = 'name' placeholder = 'Enter the song ID here' name='songIDtextbox' />
+      <input type = 'text' class = 'form-control' id = 'name' placeholder = 'Enter the song name here' name='songNametextbox' /> 
       <input type='number' class='form-control' placeholder='Enter your registration ID here' value='".$regid."' name='regid' id='regid'/>
       <input id='ratingValue' type='number' min='1' max='5' step='1' placeholder='Rate this song (1 - 5)' name='ratingValue'/>
       <input type='submit' value='Rate this song now  >>' class='tfbutton7' name='submitRatingButton'/><br />
@@ -64,7 +64,7 @@ echo "<!DOCTYPE html>
    
    <form role = 'form' action='addToPlaylist.php' method='post' class='login-form' onsubmit='return validate1();' id='form2'>
    <div class = 'form-group'>
-      <input type = 'text' class = 'form-control' id = 'songname' placeholder = 'Enter the song ID here' name='songIDtextbox' />
+      <input type = 'text' class = 'form-control' id = 'songname' placeholder = 'Enter the song name here' name='songNametextbox' />
       <input type='number' class='form-control' placeholder='Enter your registration ID here' value='".$regid."' name='songregid' id='songregid'/>
       <input type='submit' value='Add to playlist  >>' class='tfbutton7' name='addToPlaylistButton'/><br />
       <label class='tip'><strong>Tip : Please verify your registration ID before proceeding</strong></label>

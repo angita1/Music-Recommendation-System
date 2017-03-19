@@ -1,4 +1,18 @@
+
 <?php
+session_start();
+/*if(isset($_SESSION['username'])){
+    $username=$_SESSION['username'];
+}else{
+    $username="no one";
+}
+
+if(isset($_SESSION['regid'])){
+    $regid=$_SESSION['regid'];
+}else{
+    $regid=12345;
+}*/
+
 if(isset($_GET['username'])){
     $username=$_GET['username'];
 }else{
@@ -67,8 +81,11 @@ if(isset($_GET['regid'])){
 		                    <li class="scroll"><a href="#explore">Explore</a></li>                         
 		                    <li class="scroll"><a href="#about">About</a></li>                  
 		                    <li class="no-scroll"><a href="#contact">Contact</a></li> 
-		                    <!--<li class="no-scroll"><a href="http://localhost/OurProject/evento-free-music-event-template/index.html#">Logout</a></li>-->
-		                    <li class="no-scroll"><a href="logout.php#">Logout</a></li>
+		                    <!--<li class="no-scroll"><a href="http://localhost/OurProject/evento-free-music-event-template/index.html#">Logout
+		                </a></li>-->
+		                    <li class="no-scroll"><a href="../logout.php#">Logout</a></li>
+		                    
+		                     <!--<a href="logout.php#">Logout</a>ahongba-->
 		                </ul>
 		            </div>
 		        </div>
@@ -260,7 +277,7 @@ if(isset($_GET['regid'])){
 				                        
 				                        <div class="form-group">
 				                        	<label class="sr-only" for="form-email">Registration ID</label>
-				                        	<input type="number" name="regid" placeholder="Registration ID" class="form-email form-control" id="form-email">
+				                        	<input type="number" name="regid" placeholder="Registration ID" class="form-email form-control" id="form-email" value="<?php echo $regid;?>">
 				                        </div>
 				                        <div class="form-group">
 			                        		<textarea name="message" id="message" required="required" class="form-control" rows="4" placeholder="Enter your query here"></textarea>

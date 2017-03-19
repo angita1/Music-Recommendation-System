@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 
 	if(isset( $_POST['submit_loginform']))
 	{
@@ -15,7 +15,9 @@
 
  		$regid = validate_data( $_POST['form-username'] );
  		$password = validate_data( $_POST['form-password'] );
-
+		//Two session_variables are added here
+		$_SESSION['password']=$password;
+		$_SESSION['regid']=$regid;
  		$host = 'localhost';
  		$user = 'root';
  		$pass = '';
@@ -38,7 +40,9 @@
     			echo "You have successfully logged in.<br /><br /><a href='http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/CustomerPage.html'>Vist the website</a>";
     			echo "row[0] = ".$row[0];*/
     			
-    			//$_SESSION['user'] = $regid;
+    			$_SESSION['username'] = $row[Username];
+    			$_SESSION['logged_in'] = true ;
+    			//i add here ,need to change here to for regid to be removed
                 header("Location: http://localhost/OurProject/evento-free-music-event-template/form-3/AfterCustomerLogin/CustomerPage.php?username=".urlencode($row[1])."&regid=".urlencode($regid));
     		}
     		else

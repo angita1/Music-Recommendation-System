@@ -1,5 +1,7 @@
 <?php 
-unset($_SESSION['user']); 
+unset($_SESSION['username']); //user dei username onthok[]
+unset($_SESSION['redid']); //eina add touba
+
 session_destroy();
-header('location: http://localhost/OurProject/evento-free-music-event-template/index.html');
+header('Location: evento-free-music-event-template/index.html');
 ?>

@@ -1,5 +1,5 @@
 <?php
-	if(isset( $_POST['submit_searchCatalogue']))
+if(isset( $_POST['submit_searchCatalogue']))
 	{
 		echo "<!DOCTYPE html>
 
@@ -17,7 +17,7 @@
   			$data = stripslashes($data);
   			$data = strip_tags($data);
   			$data = htmlspecialchars($data);
-  			/*$data = mysqli_real_escape_string($data);*/
+  			//$data = mysqli_real_escape_string($data);
   			return $data;    
  		}
 
@@ -32,7 +32,7 @@
 			echo "Error while connecting ".mysqli_connect_error()."<br/>";
 		}
 
- 		$sql="SELECT Song_id,Song_Name,Duration FROM Song WHERE Song_Name='".$searchQuery."';";
+ 		$sql="SELECT Song_id,Song_Name,Duration FROM Song WHERE Song_Name LIKE '%".$searchQuery."%' ;"; 
  		
  		echo "
  		<div style='overflow-x:auto;'>

@@ -1,4 +1,5 @@
 <?php
+session_start();
 	if(isset( $_POST['submit_form']))
 	{
  		function validate_data($data)
@@ -10,12 +11,35 @@
   			/*$data = mysqli_real_escape_string($data);*/
   			return $data;    
  		}
+ 		
+ 		echo "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
+ 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+
+<html xmlns='http://www.w3.org/1999/xhtml' lang='en'>
+	<head>
+      	<meta charset='UTF-8'>
+      	<title>database connections</title>
+      	<style>
+      	html { 
+  background: url(headphones.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+      	</style>
+    </head>
+    
+    <body>";
 
  		$uname = validate_data( $_POST['form-username'] );
  		$emailid = validate_data( $_POST['form-email'] );
  		$password = validate_data( $_POST['form-cpassword'] );
  		$regid=rand(1,100000);
-
+		//khara semdokpani
+		$_SESSION['username']=$_POST['form-username'];
+		$_SESSION['password']=$_POST['form-cpassword'];
+		$_SESSION['regid']=$regid;
  		$host = 'localhost';
  		$user = 'root';
  		$pass = '';
@@ -38,5 +62,8 @@
 			echo "Error while populating into database<br/>".mysqli_error($con)."<br/>";
 		}
  		mysqli_close($con);
+ 		echo "
+    </body>
+</html>";
 	}
 ?>

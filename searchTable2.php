@@ -32,7 +32,7 @@
 			echo "Error while connecting ".mysqli_connect_error()."<br/>";
 		}
 
- 		$sql="SELECT Song_id,Song_Name,Duration FROM Song WHERE Song_Name='".$searchQuery."';";
+ 		$sql="SELECT Song_id,Song_Name,Duration FROM Song WHERE Song_Name LIKE'%".$searchQuery."%';";
  		
  		echo "
  		<div style='overflow-x:auto;'>

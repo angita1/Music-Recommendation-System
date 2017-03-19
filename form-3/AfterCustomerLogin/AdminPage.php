@@ -1,4 +1,15 @@
 <?php
+session_start();
+/*    $adminname=$_SESSION['adminname'];
+}else{
+    $adminname="no one";
+}
+
+if(isset($_SESSION['adminid'])){
+    $adminid=$_SESSION['adminid'];
+}else{
+    $adminid=12345;
+}*/
 if(isset($_GET['adminname'])){
     $adminname=$_GET['adminname'];
 }else{
@@ -55,7 +66,7 @@ if(isset($_GET['adminid'])){
 		                    <span class="icon-bar"></span>
 		                    <span class="icon-bar"></span>
 		                </button>
-		                <a class="navbar-brand" href="index.html">
+		                <a class="navbar-brand" href="index.php">
 		                	<!--<img class="img-responsive" src="images/musiglobe.jpg" alt="logo" height="200" width="200" />-->
 		                	<h1 style="text-indent:95px; color:white; font-weight: bold;">MusiGlobe</h1>
 		                	<!--<h3 style="text-indent:95px; color:white; font-weight: bold;">Welcome </h3>-->
@@ -68,7 +79,7 @@ if(isset($_GET['adminid'])){
 		                    <!--<li class="scroll"><a href="#about">About</a></li>                
 		                    <li class="no-scroll"><a href="#contact">Contact</a></li>--> 
 		                    <!--<li class="no-scroll"><a href="http://localhost/OurProject/evento-free-music-event-template/index.html#">Logout</a></li>-->
-		                    <li class="no-scroll"><a href="logout.php#">Logout</a></li>
+		                    <li class="no-scroll"><a href="../logout.php#">Logout</a></li>
 		                </ul>
 		            </div>
 		        </div>
@@ -123,6 +134,7 @@ if(isset($_GET['adminid'])){
 									<div>
 										<a href='viewQueries.php' class="btn btn-primary">Answer back the queries<i class="fa fa-angle-right"></i></a>
 									</div>
+									
 								</div>
 							</div>					
 						</div>

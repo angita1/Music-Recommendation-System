@@ -1,4 +1,5 @@
 <?php
+session_start();
 	if(isset( $_POST['submit_adminform']))
 	{
  		function validate_data($data)
@@ -13,7 +14,8 @@
 
  		$adminid = validate_data( $_POST['form-username'] );
  		$password = validate_data( $_POST['form-password'] );
- 		
+ 		$_SESSION['adminid']=$adminid;
+    $_SESSION['password']=$password ;
  		//echo "admin id =".$adminid;
 
  		$host = 'localhost';

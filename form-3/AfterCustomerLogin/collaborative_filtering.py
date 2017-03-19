@@ -133,15 +133,18 @@ def user_reommendations(person):
     
     #s="\n"
 	#s=s.replace("\n", "<br />\n")
-	print("<strong>These are the top '5' songs recommended for you!! Enjoy listening to them.</strong>")
-	print("<br />")
-	print("<br />")
-	print("<br />")
-	print("<br />")
+    print("<strong>These are the top '5' songs recommended for you!! Enjoy listening to them.</strong>")
+    print("<br />")
+    print("<br />")
+    print("<br />")
+    print("<br />")
     for i in range(5):
         print(mydict[recommendataions_list[i]])
         print("<br />")
         print("<br />")
+        
+    
+    
         
 user_reommendations(str(sys.argv[1]))
 #print str(sys.argv[1])

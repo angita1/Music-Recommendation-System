@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 
 echo "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN'
  'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
@@ -73,6 +73,8 @@ fclose($file);
  		mysqli_close($con);
  		
 $mystring = system('python collaborative_filtering.py '.$regid);
+
+echo "mystring = $mystring";
 
 //$result = shell_exec('python collaborative_filtering.py '.$one);
 
