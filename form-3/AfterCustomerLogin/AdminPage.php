@@ -129,7 +129,7 @@ if(isset($_GET['adminid'])){
 							<div class="item active">
 								<div class="row">
 									<div>
-										<a href="http://localhost/phpmyadmin/db_structure.php?server=1&db=WTAproject&token=2de46bac2684edaeaf10d3e545e62aad" class="btn btn-primary">Update Database<i class="fa fa-angle-right"></i></a>
+										<a href="http://localhost/phpmyadmin/db_structure.php?server=1&db=Music_System&token=2de46bac2684edaeaf10d3e545e62aad" class="btn btn-primary">Update Database<i class="fa fa-angle-right"></i></a>
 									</div>	
 									<div>
 										<a href='viewQueries.php' class="btn btn-primary">Answer back the queries<i class="fa fa-angle-right"></i></a>

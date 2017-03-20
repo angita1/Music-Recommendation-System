@@ -299,7 +299,7 @@ if(isset($_GET['regid'])){
     <footer id="footer">
         <div class="container">
             <div class="text-center">
-                <p> Copyright  &copy;2016 MusiGlobe. All Rights Reserved.</p>                
+                <p> Copyright  &copy;2017 MusiGlobe. All Rights Reserved.</p>                
             </div>
         </div>
     </footer>
